@@ -55,12 +55,12 @@ func _on_mouse_entered() -> void:
 	if not Global.is_dragging:
 		estagio.set_pecas_index_to_1()
 		draggable = true
-		self.z_index = 3
+		self.z_index = 3 
 		scale = Vector2(1.02, 1.02)
 
 
 func _on_mouse_exited() -> void:
 	if not Global.is_dragging:
 		draggable = false
-		self.z_index = 2
+		self.z_index = 2 #a ultima peça sempre irá sobrepor as outras
 		scale = Vector2(1, 1)
