@@ -60,7 +60,7 @@ func _on_mouse_entered() -> void:
 
 
 func _on_mouse_exited() -> void:
-	if not Global.is_dragging:
+	if not Global.is_dragging: 
 		draggable = false
-		self.z_index = 2 #a ultima peça sempre irá sobrepor as outras
+		self.z_index = 2 #a ultima peça sempre irá sobrepor as outras aa
 		scale = Vector2(1, 1)
