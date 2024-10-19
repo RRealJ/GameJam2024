@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b67nljid8i4n2"]
+
+[ext_resource type="PackedScene" uid="uid://divceqdmw882v" path="res://cenas/peca2x2.tscn" id="1_1sh4d"]
+[ext_resource type="PackedScene" uid="uid://higaqni2e10g" path="res://cenas/peca_L.tscn" id="3_rdo4y"]
+[ext_resource type="PackedScene" uid="uid://b41dapldo5twn" path="res://cenas/peca_T.tscn" id="4_6exub"]
+
+[node name="TestesPecas" type="Node2D"]
+
+[node name="peca2x2" parent="." instance=ExtResource("1_1sh4d")]
+position = Vector2(1035, 121)
+
+[node name="PecaL" parent="." instance=ExtResource("3_rdo4y")]
+
+[node name="peca_T" parent="." instance=ExtResource("4_6exub")]
+position = Vector2(465, 229)

@@ -16,10 +16,6 @@ texture = ExtResource("2_s56ct")
 position = Vector2(2.75604e-14, -2.46154)
 scale = Vector2(3.87879, 2.46154)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="sprite/area"]
-modulate = Color(1, 1, 1, 0.152941)
-polygon = PackedVector2Array(-15, -5, -15, 7, 3, 7, 3, 25, 15, 25, 15, -23, 3, -23, 3, -5)
-
 [node name="Button" type="Button" parent="sprite/area"]
 offset_left = 3.0
 offset_top = 13.0
@@ -48,5 +44,15 @@ offset_right = -3.0
 offset_bottom = 7.0
 metadata/_edit_use_anchors_ = true
 
+[node name="colissao" type="CollisionPolygon2D" parent="sprite/area"]
+modulate = Color(1, 1, 1, 0.152941)
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(-15, -5, -15, 7, 3, 7, 3, 25, 15, 25, 15, -23, 3, -23, 3, -5)
+
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="sprite/area" to="." method="_on_area_entered"]
 [connection signal="area_exited" from="sprite/area" to="." method="_on_area_exited"]
+[connection signal="body_entered" from="sprite/area" to="." method="_on_area_body_entered"]
+[connection signal="body_exited" from="sprite/area" to="." method="_on_area_body_exited"]
+[connection signal="mouse_entered" from="sprite/area" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_exited" from="sprite/area" to="." method="_on_area_mouse_exited"]
