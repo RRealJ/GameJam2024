@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://b41dapldo5twn"]
+
+[ext_resource type="Script" path="res://scripts/peca_geral.gd" id="1_t7yn1"]
+[ext_resource type="Texture2D" uid="uid://c87dfcgjth2gt" path="res://icon.svg" id="2_s56ct"]
+
+[node name="peca_T" type="Node2D"]
+script = ExtResource("1_t7yn1")
+
+[node name="sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.275, 0.421875)
+texture = ExtResource("2_s56ct")
+
+[node name="area" type="Area2D" parent="sprite"]
+position = Vector2(0, -2.37037)
+scale = Vector2(3.63636, 2.37037)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="sprite/area"]
+polygon = PackedVector2Array(-15, -5, -15, 7, 3, 7, 3, 25, 15, 25, 15, -23, 3, -23, 3, -5)
+
+[node name="Button" type="Button" parent="sprite/area"]
+offset_left = 3.0
+offset_top = 13.0
+offset_right = 15.0
+offset_bottom = 25.0
+
+[node name="Button2" type="Button" parent="sprite/area"]
+offset_left = 3.0
+offset_top = -5.0
+offset_right = 15.0
+offset_bottom = 7.0
+
+[node name="Button3" type="Button" parent="sprite/area"]
+offset_left = 3.0
+offset_top = -23.0
+offset_right = 15.0
+offset_bottom = -11.0
+
+[node name="Button4" type="Button" parent="sprite/area"]
+offset_left = -15.0
+offset_top = -5.0
+offset_right = -3.0
+offset_bottom = 7.0
+
+[connection signal="area_entered" from="sprite/area" to="." method="_on_area_entered"]
+[connection signal="area_exited" from="sprite/area" to="." method="_on_area_exited"]
