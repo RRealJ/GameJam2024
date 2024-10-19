@@ -7,11 +7,12 @@
 size = Vector2(12, 66)
 
 [node name="PecaI" type="Node2D"]
+position = Vector2(471, 328)
 script = ExtResource("1_kxb8k")
 
 [node name="sprite" type="Sprite2D" parent="."]
 position = Vector2(-4.47035e-07, -1)
-scale = Vector2(0.125, 0.5625)
+scale = Vector2(1, 4.496)
 texture = ExtResource("2_e84jn")
 
 [node name="area" type="Area2D" parent="sprite"]
@@ -23,6 +24,7 @@ offset_left = -6.0
 offset_top = 21.0
 offset_right = 6.0
 offset_bottom = 33.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="sprite/area"]
 offset_left = -6.0
