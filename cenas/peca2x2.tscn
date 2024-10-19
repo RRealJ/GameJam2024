@@ -7,44 +7,49 @@
 size = Vector2(40, 40)
 
 [node name="peca2x2" type="Node2D"]
+position = Vector2(415, 208)
 script = ExtResource("1_bh5f1")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2.84217e-14, -7.10543e-15)
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(-2.84217e-14, 1)
 scale = Vector2(0.320313, 0.320313)
 texture = ExtResource("1_3b64e")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D"]
+[node name="area" type="Area2D" parent="sprite"]
 position = Vector2(1.48866e-06, 3.72166e-07)
 scale = Vector2(3.12195, 3.12195)
 
-[node name="Button" type="Button" parent="Sprite2D/Area2D"]
+[node name="Button" type="Button" parent="sprite/area"]
 offset_left = -15.0
 offset_top = -15.0
 offset_right = -3.0
 offset_bottom = -3.0
+metadata/_edit_use_anchors_ = true
 
-[node name="Button2" type="Button" parent="Sprite2D/Area2D"]
+[node name="Button2" type="Button" parent="sprite/area"]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 16.0
 offset_bottom = 16.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Button3" type="Button" parent="Sprite2D/Area2D"]
+[node name="Button3" type="Button" parent="sprite/area"]
 offset_left = -15.0
 offset_top = 4.0
 offset_right = -3.0
 offset_bottom = 16.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Button4" type="Button" parent="Sprite2D/Area2D"]
+[node name="Button4" type="Button" parent="sprite/area"]
 offset_left = 4.0
 offset_top = -15.0
 offset_right = 16.0
 offset_bottom = -3.0
+metadata/_edit_use_anchors_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+[node name="colissao" type="CollisionShape2D" parent="sprite/area"]
 position = Vector2(5.68434e-14, -1.19209e-07)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mo62t")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
