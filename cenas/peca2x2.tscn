@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://divceqdmw882v"]
+
+[ext_resource type="Texture2D" uid="uid://c87dfcgjth2gt" path="res://icon.svg" id="1_3b64e"]
+
+[node name="peca2x2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.84217e-14, -7.10543e-15)
+scale = Vector2(0.320313, 0.320313)
+texture = ExtResource("1_3b64e")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+position = Vector2(1.48866e-06, 3.72166e-07)
+scale = Vector2(3.12195, 3.12195)
+
+[node name="Button" type="Button" parent="Sprite2D/Area2D"]
+offset_left = -15.0
+offset_top = -15.0
+offset_right = -3.0
+offset_bottom = -3.0
+
+[node name="Button2" type="Button" parent="Sprite2D/Area2D"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="Button3" type="Button" parent="Sprite2D/Area2D"]
+offset_left = -15.0
+offset_top = 4.0
+offset_right = -3.0
+offset_bottom = 16.0
+
+[node name="Button4" type="Button" parent="Sprite2D/Area2D"]
+offset_left = 4.0
+offset_top = -15.0
+offset_right = 16.0
+offset_bottom = -3.0
