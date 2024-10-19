@@ -7,14 +7,16 @@
 script = ExtResource("1_fd83k")
 
 [node name="sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.275, 0.421875)
+position = Vector2(0, -5.96046e-08)
+scale = Vector2(0.257813, 0.40625)
 texture = ExtResource("2_xbp8j")
 
 [node name="area" type="Area2D" parent="sprite"]
-position = Vector2(0, -2.37037)
-scale = Vector2(3.63636, 2.36334)
+position = Vector2(0, -2.46154)
+scale = Vector2(3.87879, 2.45423)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="sprite/area"]
+modulate = Color(1, 1, 1, 0.0980392)
 polygon = PackedVector2Array(-15, -23, -15, -11, 3, -11, 3, 25, 15, 25, 15, -23)
 
 [node name="Button" type="Button" parent="sprite/area"]

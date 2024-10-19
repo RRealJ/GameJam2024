@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://kirmard1vcbt"]
+
+[ext_resource type="Script" path="res://scripts/peca_geral.gd" id="1_kxb8k"]
+[ext_resource type="Texture2D" uid="uid://c87dfcgjth2gt" path="res://icon.svg" id="2_e84jn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kusxo"]
+size = Vector2(12, 66)
+
+[node name="PecaI" type="Node2D"]
+script = ExtResource("1_kxb8k")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(-4.47035e-07, -1)
+scale = Vector2(0.125, 0.5625)
+texture = ExtResource("2_e84jn")
+
+[node name="area" type="Area2D" parent="sprite"]
+position = Vector2(3.57628e-06, 7.15256e-07)
+scale = Vector2(8, 1.77778)
+
+[node name="Button" type="Button" parent="sprite/area"]
+offset_left = -6.0
+offset_top = 21.0
+offset_right = 6.0
+offset_bottom = 33.0
+
+[node name="Button2" type="Button" parent="sprite/area"]
+offset_left = -6.0
+offset_top = 3.0
+offset_right = 6.0
+offset_bottom = 15.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="sprite/area"]
+offset_left = -6.0
+offset_top = -33.0
+offset_right = 6.0
+offset_bottom = -21.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button4" type="Button" parent="sprite/area"]
+offset_left = -6.0
+offset_top = -15.0
+offset_right = 6.0
+offset_bottom = -3.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sprite/area"]
+position = Vector2(0, -1.07288e-06)
+shape = SubResource("RectangleShape2D_kusxo")
+debug_color = Color(0, 0.6, 0.701961, 0.0588235)
