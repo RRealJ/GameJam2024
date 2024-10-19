@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/encaixes.gd" id="3_nfc85"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cnnkk"]
-size = Vector2(43, 28.5896)
+size = Vector2(63.75, 41.6931)
 
 [node name="PecaL" type="Node2D"]
 position = Vector2(295, 203)
@@ -63,7 +63,7 @@ polygon = PackedVector2Array(-15, -23, -15, -11, 3, -11, 3, 25, 15, 25, 15, -23)
 script = ExtResource("3_nfc85")
 
 [node name="encaixe1" type="CollisionShape2D" parent="sprite/enc1"]
-position = Vector2(34.5, 0.317642)
+position = Vector2(35, -1.19209e-07)
 shape = SubResource("RectangleShape2D_cnnkk")
 debug_color = Color(0.894118, 0.317647, 0, 0.129412)
 
@@ -72,7 +72,7 @@ position = Vector2(0, 1.27065)
 script = ExtResource("3_nfc85")
 
 [node name="encaixe2" type="CollisionShape2D" parent="sprite/enc2"]
-position = Vector2(-34, -45.108)
+position = Vector2(-34, -45.7433)
 shape = SubResource("RectangleShape2D_cnnkk")
 debug_color = Color(0.894118, 0.317647, 0, 0.129412)
 
@@ -80,7 +80,7 @@ debug_color = Color(0.894118, 0.317647, 0, 0.129412)
 script = ExtResource("3_nfc85")
 
 [node name="encaixe3" type="CollisionShape2D" parent="sprite/enc3"]
-position = Vector2(35, -43.8374)
+position = Vector2(35, -44.4727)
 shape = SubResource("RectangleShape2D_cnnkk")
 debug_color = Color(0.894118, 0.317647, 0, 0.129412)
 
@@ -88,7 +88,7 @@ debug_color = Color(0.894118, 0.317647, 0, 0.129412)
 script = ExtResource("3_nfc85")
 
 [node name="encaixe4" type="CollisionShape2D" parent="sprite/enc4"]
-position = Vector2(34, 44.4727)
+position = Vector2(35, 43.8374)
 shape = SubResource("RectangleShape2D_cnnkk")
 debug_color = Color(0.894118, 0.317647, 0, 0.129412)
 
