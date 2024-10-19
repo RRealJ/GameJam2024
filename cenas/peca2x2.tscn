@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/peca_geral.gd" id="1_bh5f1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mo62t"]
-size = Vector2(40, 40)
+size = Vector2(31, 31)
 
 [node name="peca2x2" type="Node2D"]
 position = Vector2(415, 208)
@@ -48,7 +48,7 @@ offset_bottom = -3.0
 metadata/_edit_use_anchors_ = true
 
 [node name="colissao" type="CollisionShape2D" parent="sprite/area"]
-position = Vector2(5.68434e-14, -1.19209e-07)
+position = Vector2(0.499969, 0.5)
 shape = SubResource("RectangleShape2D_mo62t")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
