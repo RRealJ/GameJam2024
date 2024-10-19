@@ -12,7 +12,9 @@ var initialPos : Vector2
 var offset : Vector2
 
 
+
 func _on_ready() -> void:
+	
 	pass
 	#sprite.texture = textura #atribui a textura que quiser ao carregar na cena
 
@@ -45,18 +47,6 @@ func _on_area_exited(area) -> void: #quando sair de area peça, fica normal
 		sprite.modulate = Color8(186, 8, 0, 0)
 
 
-func _on_area_mouse_entered() -> void: #mouse está em cima
-	if not Global.is_dragging:
-		draggable = true
-		scale = Vector2(1.05, 1.05)
-
-
-func _on_area_mouse_exited() -> void: #mouse saiu de cima
-	if not Global.is_dragging:
-		draggable = false
-		scale = Vector2(1, 1)
-
-
 func _on_area_body_entered(body: Node2D) -> void: #Está em cima do buraco
 	if body.is_in_group('dropable'):
 		is_inside_dropable = true
@@ -68,3 +58,15 @@ func _on_area_body_exited(body: Node2D) -> void: #Está em cima do buraco
 	if body.is_in_group('dropable'):
 		is_inside_dropable = false
 		body.modulate = Color(Color.LEMON_CHIFFON, 0.7)
+
+
+func _on_mouse_entered() -> void:
+	if not Global.is_dragging:
+		draggable = true
+		scale = Vector2(1.02, 1.02)
+
+
+func _on_mouse_exited() -> void:
+	if not Global.is_dragging:
+		draggable = false
+		scale = Vector2(1, 1)

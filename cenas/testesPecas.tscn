@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b67nljid8i4n2"]
+[gd_scene load_steps=6 format=3 uid="uid://b67nljid8i4n2"]
 
 [ext_resource type="PackedScene" uid="uid://divceqdmw882v" path="res://cenas/peca2x2.tscn" id="1_1sh4d"]
 [ext_resource type="PackedScene" uid="uid://higaqni2e10g" path="res://cenas/peca_L.tscn" id="3_rdo4y"]
 [ext_resource type="PackedScene" uid="uid://b41dapldo5twn" path="res://cenas/peca_T.tscn" id="4_6exub"]
 [ext_resource type="PackedScene" uid="uid://ovgmopgfrdyf" path="res://cenas/pecaI.tscn" id="4_pjlgx"]
+[ext_resource type="PackedScene" uid="uid://c0cx2u8u3pfbn" path="res://cenas/buraco.tscn" id="5_dxoyu"]
 
 [node name="TestesPecas" type="Node2D"]
 
@@ -17,3 +18,15 @@ position = Vector2(465, 229)
 
 [node name="Peca__I" parent="." instance=ExtResource("4_pjlgx")]
 position = Vector2(585, 265)
+
+[node name="buraco" parent="." instance=ExtResource("5_dxoyu")]
+position = Vector2(213, 420)
+
+[node name="buraco2" parent="." instance=ExtResource("5_dxoyu")]
+position = Vector2(388, 454)
+
+[node name="buraco3" parent="." instance=ExtResource("5_dxoyu")]
+position = Vector2(925, 272)
+
+[node name="buraco4" parent="." instance=ExtResource("5_dxoyu")]
+position = Vector2(705, 444)
