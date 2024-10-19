@@ -10,11 +10,10 @@ var is_inside_dropable = false
 var body_ref
 var initialPos : Vector2
 var offset : Vector2
-
+var encaixe
 
 
 func _on_ready() -> void:
-	
 	pass
 	#sprite.texture = textura #atribui a textura que quiser ao carregar na cena
 
@@ -35,16 +34,6 @@ func _process(delta: float) -> void:
 				tween.tween_property(self, "position", body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
 			else:
 				tween.tween_property(self, "global_position", initialPos, 0.2).set_ease(Tween.EASE_OUT)
-			
-
-func _on_area_entered(area) -> void: #quando entrar em area peça, fica vermelha
-	if area is Peca:
-		sprite.modulate = Color8(186, 8, 0, 45)
-		
-
-func _on_area_exited(area) -> void: #quando sair de area peça, fica normal
-	if area is Peca:
-		sprite.modulate = Color8(186, 8, 0, 0)
 
 
 func _on_area_body_entered(body: Node2D) -> void: #Está em cima do buraco
@@ -63,10 +52,12 @@ func _on_area_body_exited(body: Node2D) -> void: #Está em cima do buraco
 func _on_mouse_entered() -> void:
 	if not Global.is_dragging:
 		draggable = true
+		print("entrnado", self.name)
 		scale = Vector2(1.02, 1.02)
 
 
 func _on_mouse_exited() -> void:
 	if not Global.is_dragging:
 		draggable = false
+		print("saindo", self.name)
 		scale = Vector2(1, 1)

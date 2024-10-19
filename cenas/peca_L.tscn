@@ -11,7 +11,6 @@ position = Vector2(295, 203)
 script = ExtResource("1_fd83k")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(-19, 22)
 scale = Vector2(1, 1.574)
 texture = ExtResource("2_xbp8j")
 
@@ -55,35 +54,33 @@ mouse_filter = 2
 disabled = true
 metadata/_edit_use_anchors_ = true
 
-[node name="colissao" type="CollisionPolygon2D" parent="sprite/area"]
+[node name="colisao" type="CollisionPolygon2D" parent="sprite/area"]
 modulate = Color(1, 1, 1, 0.0980392)
 polygon = PackedVector2Array(-15, -23, -15, -11, 3, -11, 3, 25, 15, 25, 15, -23)
 
 [node name="encaixes" type="Area2D" parent="sprite"]
 
-[node name="colissao" type="CollisionShape2D" parent="sprite/encaixes"]
+[node name="encaixe1" type="CollisionShape2D" parent="sprite/encaixes"]
 position = Vector2(34.5, 0.317642)
 shape = SubResource("RectangleShape2D_cnnkk")
 debug_color = Color(0.894118, 0.317647, 0, 0.129412)
 
-[node name="colissao2" type="CollisionShape2D" parent="sprite/encaixes"]
+[node name="encaixe2" type="CollisionShape2D" parent="sprite/encaixes"]
 position = Vector2(-34, -43.8374)
 shape = SubResource("RectangleShape2D_cnnkk")
 debug_color = Color(0.894118, 0.317647, 0, 0.129412)
 
-[node name="colissao3" type="CollisionShape2D" parent="sprite/encaixes"]
+[node name="encaixe3" type="CollisionShape2D" parent="sprite/encaixes"]
 position = Vector2(35, -43.8374)
 shape = SubResource("RectangleShape2D_cnnkk")
 debug_color = Color(0.894118, 0.317647, 0, 0.129412)
 
-[node name="colissao4" type="CollisionShape2D" parent="sprite/encaixes"]
+[node name="encaixe4" type="CollisionShape2D" parent="sprite/encaixes"]
 position = Vector2(34, 44.4727)
 shape = SubResource("RectangleShape2D_cnnkk")
 debug_color = Color(0.894118, 0.317647, 0, 0.129412)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="area_entered" from="sprite/area" to="." method="_on_area_entered"]
-[connection signal="area_exited" from="sprite/area" to="." method="_on_area_exited"]
 [connection signal="body_entered" from="sprite/area" to="." method="_on_area_body_entered"]
 [connection signal="body_exited" from="sprite/area" to="." method="_on_area_body_exited"]
 [connection signal="mouse_entered" from="sprite/area" to="." method="_on_area_mouse_entered"]

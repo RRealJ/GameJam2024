@@ -9,7 +9,7 @@
 [node name="TestesPecas" type="Node2D"]
 
 [node name="peca2x2" parent="." instance=ExtResource("1_1sh4d")]
-position = Vector2(360, 25)
+position = Vector2(784, 135)
 
 [node name="PecaL" parent="." instance=ExtResource("3_rdo4y")]
 

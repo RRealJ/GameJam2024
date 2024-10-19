@@ -11,7 +11,6 @@ position = Vector2(315, 183)
 script = ExtResource("1_t7yn1")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(0, 1.13687e-13)
 scale = Vector2(1, 1.574)
 texture = ExtResource("2_s56ct")
 
@@ -55,7 +54,7 @@ mouse_filter = 2
 disabled = true
 metadata/_edit_use_anchors_ = true
 
-[node name="colissao" type="CollisionPolygon2D" parent="sprite/area"]
+[node name="colisao" type="CollisionPolygon2D" parent="sprite/area"]
 modulate = Color(1, 1, 1, 0.152941)
 polygon = PackedVector2Array(-15, -5, -15, 7, 3, 7, 3, 25, 15, 25, 15, -23, 3, -23, 3, -5)
 
@@ -82,8 +81,6 @@ shape = SubResource("RectangleShape2D_f5gjw")
 debug_color = Color(0.917647, 0.282353, 0, 0.129412)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="area_entered" from="sprite/area" to="." method="_on_area_entered"]
-[connection signal="area_exited" from="sprite/area" to="." method="_on_area_exited"]
 [connection signal="body_entered" from="sprite/area" to="." method="_on_area_body_entered"]
 [connection signal="body_exited" from="sprite/area" to="." method="_on_area_body_exited"]
 [connection signal="mouse_entered" from="sprite/area" to="." method="_on_area_mouse_entered"]
