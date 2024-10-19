@@ -21,6 +21,7 @@ func _on_ready() -> void:
 func _process(delta: float) -> void: 
 	if draggable:	#codigo para arrastar com mouse e animação com tween
 		if Input.is_action_just_pressed("click"):
+			print(encaixe.name)
 			initialPos = global_position
 			offset = get_global_mouse_position() - global_position
 			Global.is_dragging = true
@@ -52,12 +53,10 @@ func _on_area_body_exited(body: Node2D) -> void: #Está em cima do buraco
 func _on_mouse_entered() -> void:
 	if not Global.is_dragging:
 		draggable = true
-		print("entrnado", self.name)
 		scale = Vector2(1.02, 1.02)
 
 
 func _on_mouse_exited() -> void:
 	if not Global.is_dragging:
 		draggable = false
-		print("saindo", self.name)
 		scale = Vector2(1, 1)
