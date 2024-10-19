@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://higaqni2e10g"]
+[gd_scene load_steps=4 format=3 uid="uid://higaqni2e10g"]
 
 [ext_resource type="Script" path="res://scripts/peca_geral.gd" id="1_fd83k"]
 [ext_resource type="Texture2D" uid="uid://c87dfcgjth2gt" path="res://icon.svg" id="2_xbp8j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnnkk"]
+size = Vector2(43, 28.5896)
 
 [node name="PecaL" type="Node2D"]
 position = Vector2(295, 203)
@@ -21,6 +24,8 @@ offset_left = 3.0
 offset_top = 13.0
 offset_right = 15.0
 offset_bottom = 25.0
+mouse_filter = 2
+disabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="sprite/area"]
@@ -28,6 +33,8 @@ offset_left = 3.0
 offset_top = -5.0
 offset_right = 15.0
 offset_bottom = 7.0
+mouse_filter = 2
+disabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="sprite/area"]
@@ -35,6 +42,8 @@ offset_left = 3.0
 offset_top = -23.0
 offset_right = 15.0
 offset_bottom = -11.0
+mouse_filter = 2
+disabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button4" type="Button" parent="sprite/area"]
@@ -42,12 +51,35 @@ offset_left = -15.0
 offset_top = -23.0
 offset_right = -3.0
 offset_bottom = -11.0
+mouse_filter = 2
+disabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="colissao" type="CollisionPolygon2D" parent="sprite/area"]
 modulate = Color(1, 1, 1, 0.0980392)
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-15, -23, -15, -11, 3, -11, 3, 25, 15, 25, 15, -23)
+
+[node name="encaixes" type="Area2D" parent="sprite"]
+
+[node name="colissao" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(34.5, 0.317642)
+shape = SubResource("RectangleShape2D_cnnkk")
+debug_color = Color(0.894118, 0.317647, 0, 0.129412)
+
+[node name="colissao2" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(-34, -43.8374)
+shape = SubResource("RectangleShape2D_cnnkk")
+debug_color = Color(0.894118, 0.317647, 0, 0.129412)
+
+[node name="colissao3" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(35, -43.8374)
+shape = SubResource("RectangleShape2D_cnnkk")
+debug_color = Color(0.894118, 0.317647, 0, 0.129412)
+
+[node name="colissao4" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(34, 44.4727)
+shape = SubResource("RectangleShape2D_cnnkk")
+debug_color = Color(0.894118, 0.317647, 0, 0.129412)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="sprite/area" to="." method="_on_area_entered"]

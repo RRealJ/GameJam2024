@@ -1,62 +1,96 @@
-[gd_scene load_steps=4 format=3 uid="uid://bucurehhqtt42"]
+[gd_scene load_steps=5 format=3 uid="uid://ovgmopgfrdyf"]
 
 [ext_resource type="Script" path="res://scripts/peca_geral.gd" id="1_j2lf4"]
 [ext_resource type="Texture2D" uid="uid://c87dfcgjth2gt" path="res://icon.svg" id="2_ea7v6"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_odeyn"]
-size = Vector2(110.644, 120.642)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y210c"]
+size = Vector2(39, 42)
 
-[node name="PecaI" type="Node2D"]
-position = Vector2(18, -17)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8m8s"]
+size = Vector2(42, 264)
+
+[node name="Peca__I" type="Node2D"]
 script = ExtResource("1_j2lf4")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(449, 304)
-scale = Vector2(0.445313, 2.13856)
+position = Vector2(28, -8)
+scale = Vector2(0.391, 2.125)
 texture = ExtResource("2_ea7v6")
 
-[node name="area" type="Area2D" parent="sprite"]
-position = Vector2(2.24561, 0)
-scale = Vector2(1.03509, 1)
+[node name="encaixes" type="Area2D" parent="sprite"]
+position = Vector2(-71.6113, 3.76471)
+scale = Vector2(2.55754, 0.470588)
 
-[node name="colissao" type="CollisionShape2D" parent="sprite/area"]
-position = Vector2(-3.25415, 0.46759)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_odeyn")
-debug_color = Color(0, 0.6, 0.701961, 0)
+[node name="encaixe" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(27.5, 96)
+shape = SubResource("RectangleShape2D_y210c")
+debug_color = Color(0.862745, 0.301961, 0, 0.188235)
+
+[node name="encaixe2" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(28, -112)
+shape = SubResource("RectangleShape2D_y210c")
+debug_color = Color(0.862745, 0.301961, 0, 0.188235)
+
+[node name="encaixe3" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(28, -43)
+shape = SubResource("RectangleShape2D_y210c")
+debug_color = Color(0.862745, 0.301961, 0, 0.188235)
+
+[node name="encaixe4" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(28, 25)
+shape = SubResource("RectangleShape2D_y210c")
+debug_color = Color(0.862745, 0.301961, 0, 0.188235)
+
+[node name="area" type="Area2D" parent="sprite"]
+position = Vector2(-71.6113, 3.76471)
+scale = Vector2(2.55754, 0.470588)
 
 [node name="Button" type="Button" parent="sprite/area"]
-offset_left = -48.8136
-offset_top = -59.324
-offset_right = 42.1864
-offset_bottom = -38.324
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 21.0
+offset_bottom = 88.0
+scale = Vector2(3, 3)
+mouse_filter = 2
 disabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="sprite/area"]
-offset_left = -46.6441
-offset_top = 37.9376
-offset_right = 44.3559
-offset_bottom = 58.9376
+offset_left = 7.0
+offset_top = -134.0
+offset_right = 21.0
+offset_bottom = -119.0
+scale = Vector2(3, 3)
+mouse_filter = 2
 disabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="sprite/area"]
-offset_left = -46.6441
-offset_top = 7.54338
-offset_right = 44.3559
-offset_bottom = 28.5434
+offset_left = 7.0
+offset_top = -65.0
+offset_right = 21.0
+offset_bottom = -50.0
+scale = Vector2(3, 3)
+mouse_filter = 2
 disabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button4" type="Button" parent="sprite/area"]
-offset_left = -46.6441
-offset_top = -26.5917
-offset_right = 44.3559
-offset_bottom = -5.59169
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 21.0
+offset_bottom = 19.0
+scale = Vector2(3, 3)
+mouse_filter = 2
 disabled = true
 metadata/_edit_use_anchors_ = true
 
+[node name="colissao" type="CollisionShape2D" parent="sprite/area"]
+position = Vector2(28, -9)
+shape = SubResource("RectangleShape2D_p8m8s")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="sprite/area" to="." method="_on_area_entered"]
 [connection signal="area_exited" from="sprite/area" to="." method="_on_area_exited"]
 [connection signal="body_entered" from="sprite/area" to="." method="_on_area_body_entered"]

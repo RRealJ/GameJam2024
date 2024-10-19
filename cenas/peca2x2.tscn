@@ -3,59 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://c87dfcgjth2gt" path="res://icon.svg" id="1_3b64e"]
 [ext_resource type="Script" path="res://scripts/peca_geral.gd" id="1_bh5f1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo62t"]
-size = Vector2(31.0189, 30.6685)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcvb8"]
 size = Vector2(41, 41)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo62t"]
+size = Vector2(31.0189, 30.6685)
+
 [node name="peca2x2" type="Node2D"]
-position = Vector2(260, 145)
 script = ExtResource("1_bh5f1")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(-1.78814e-07, -1.78814e-07)
+position = Vector2(392, 246)
 texture = ExtResource("1_3b64e")
-
-[node name="area" type="Area2D" parent="sprite"]
-scale = Vector2(3.80413, 3.8802)
-
-[node name="Button" type="Button" parent="sprite/area"]
-offset_left = -15.0
-offset_top = -15.0
-offset_right = -2.99997
-offset_bottom = -2.99999
-disabled = true
-metadata/_edit_use_anchors_ = true
-
-[node name="Button2" type="Button" parent="sprite/area"]
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 15.0
-offset_bottom = 15.0
-disabled = true
-metadata/_edit_use_anchors_ = true
-
-[node name="Button3" type="Button" parent="sprite/area"]
-offset_left = -15.0
-offset_top = 3.0
-offset_right = -3.0
-offset_bottom = 15.0
-disabled = true
-metadata/_edit_use_anchors_ = true
-
-[node name="Button4" type="Button" parent="sprite/area"]
-offset_left = 3.0
-offset_top = -15.0
-offset_right = 15.0
-offset_bottom = -2.99999
-disabled = true
-metadata/_edit_use_anchors_ = true
-
-[node name="colissao" type="CollisionShape2D" parent="sprite/area"]
-position = Vector2(-7.62939e-06, -0.12886)
-shape = SubResource("RectangleShape2D_mo62t")
-debug_color = Color(0, 0.6, 0.701961, 0.027451)
 
 [node name="encaixes" type="Area2D" parent="sprite"]
 
@@ -78,6 +37,50 @@ debug_color = Color(0.862745, 0.203922, 0, 0.282353)
 position = Vector2(33, 35)
 shape = SubResource("RectangleShape2D_kcvb8")
 debug_color = Color(0.862745, 0.203922, 0, 0.282353)
+
+[node name="area" type="Area2D" parent="sprite"]
+scale = Vector2(3.80413, 3.8802)
+
+[node name="Button" type="Button" parent="sprite/area"]
+offset_left = -15.0
+offset_top = -15.0
+offset_right = -2.99997
+offset_bottom = -2.99999
+mouse_filter = 2
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="sprite/area"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 15.0
+offset_bottom = 15.0
+mouse_filter = 2
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="sprite/area"]
+offset_left = -15.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = 15.0
+mouse_filter = 2
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button4" type="Button" parent="sprite/area"]
+offset_left = 3.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = -2.99999
+mouse_filter = 2
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="colissao" type="CollisionShape2D" parent="sprite/area"]
+position = Vector2(-7.62939e-06, -0.12886)
+shape = SubResource("RectangleShape2D_mo62t")
+debug_color = Color(0, 0.6, 0.701961, 0.027451)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="sprite/area" to="." method="_on_area_entered"]

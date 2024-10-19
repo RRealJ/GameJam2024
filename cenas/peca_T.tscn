@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://b41dapldo5twn"]
+[gd_scene load_steps=4 format=3 uid="uid://b41dapldo5twn"]
 
 [ext_resource type="Script" path="res://scripts/peca_geral.gd" id="1_t7yn1"]
 [ext_resource type="Texture2D" uid="uid://c87dfcgjth2gt" path="res://icon.svg" id="2_s56ct"]
 
-[node name="peca_T" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5gjw"]
+size = Vector2(44, 28.4244)
+
+[node name="pecaT" type="Node2D"]
 position = Vector2(315, 183)
 script = ExtResource("1_t7yn1")
 
@@ -21,6 +24,8 @@ offset_left = 3.0
 offset_top = 13.0
 offset_right = 15.0
 offset_bottom = 25.0
+mouse_filter = 2
+disabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="sprite/area"]
@@ -28,6 +33,8 @@ offset_left = 3.0
 offset_top = -5.0
 offset_right = 15.0
 offset_bottom = 7.0
+mouse_filter = 2
+disabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="sprite/area"]
@@ -35,6 +42,8 @@ offset_left = 3.0
 offset_top = -23.0
 offset_right = 15.0
 offset_bottom = -11.0
+mouse_filter = 2
+disabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Button4" type="Button" parent="sprite/area"]
@@ -42,12 +51,35 @@ offset_left = -15.0
 offset_top = -5.0
 offset_right = -3.0
 offset_bottom = 7.0
+mouse_filter = 2
+disabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="colissao" type="CollisionPolygon2D" parent="sprite/area"]
 modulate = Color(1, 1, 1, 0.152941)
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-15, -5, -15, 7, 3, 7, 3, 25, 15, 25, 15, -23, 3, -23, 3, -5)
+
+[node name="encaixes" type="Area2D" parent="sprite"]
+
+[node name="encaixe" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(-34, 0.400261)
+shape = SubResource("RectangleShape2D_f5gjw")
+debug_color = Color(0.917647, 0.282353, 0, 0.129412)
+
+[node name="encaixe2" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(35, 43.202)
+shape = SubResource("RectangleShape2D_f5gjw")
+debug_color = Color(0.917647, 0.282353, 0, 0.129412)
+
+[node name="encaixe3" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(35, -44.4727)
+shape = SubResource("RectangleShape2D_f5gjw")
+debug_color = Color(0.917647, 0.282353, 0, 0.129412)
+
+[node name="encaixe4" type="CollisionShape2D" parent="sprite/encaixes"]
+position = Vector2(35, 3.69549e-06)
+shape = SubResource("RectangleShape2D_f5gjw")
+debug_color = Color(0.917647, 0.282353, 0, 0.129412)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="sprite/area" to="." method="_on_area_entered"]
