@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://divceqdmw882v"]
+[gd_scene load_steps=4 format=3 uid="uid://divceqdmw882v"]
 
 [ext_resource type="Texture2D" uid="uid://c87dfcgjth2gt" path="res://icon.svg" id="1_3b64e"]
+[ext_resource type="Script" path="res://scripts/peca_geral.gd" id="1_bh5f1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo62t"]
+size = Vector2(40, 40)
 
 [node name="peca2x2" type="Node2D"]
+script = ExtResource("1_bh5f1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2.84217e-14, -7.10543e-15)
@@ -24,15 +29,22 @@ offset_left = 4.0
 offset_top = 4.0
 offset_right = 16.0
 offset_bottom = 16.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="Sprite2D/Area2D"]
 offset_left = -15.0
 offset_top = 4.0
 offset_right = -3.0
 offset_bottom = 16.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button4" type="Button" parent="Sprite2D/Area2D"]
 offset_left = 4.0
 offset_top = -15.0
 offset_right = 16.0
 offset_bottom = -3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(5.68434e-14, -1.19209e-07)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_mo62t")
