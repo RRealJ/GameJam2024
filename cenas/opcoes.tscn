@@ -1,0 +1,119 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4ug05ucjvs5g"]
+
+[ext_resource type="Script" path="res://scripts/audio_sliders.gd" id="1_qjdpa"]
+[ext_resource type="Script" path="res://scripts/opcoes.gd" id="1_w3ryb"]
+
+[node name="Opcoes" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_w3ryb")
+
+[node name="voltar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 231.0
+offset_right = 162.0
+offset_bottom = 291.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Voltar"
+
+[node name="audio" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -455.0
+offset_top = -167.0
+offset_right = -207.0
+offset_bottom = -9.0
+
+[node name="master" type="Label" parent="audio"]
+layout_mode = 2
+text = "Master"
+horizontal_alignment = 1
+
+[node name="HSlider_master" type="HSlider" parent="audio"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 0.5
+script = ExtResource("1_qjdpa")
+bus_name = "Master"
+
+[node name="musica" type="Label" parent="audio"]
+layout_mode = 2
+text = "Musica"
+horizontal_alignment = 1
+
+[node name="HSlider_musica" type="HSlider" parent="audio"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 0.5
+script = ExtResource("1_qjdpa")
+bus_name = "Musica"
+
+[node name="sfx" type="Label" parent="audio"]
+layout_mode = 2
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="HSlider_sfx" type="HSlider" parent="audio"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 0.5
+script = ExtResource("1_qjdpa")
+bus_name = "SFX"
+
+[node name="video" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = -155.0
+offset_right = 437.0
+offset_bottom = -36.0
+
+[node name="labels" type="VBoxContainer" parent="video"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="video/labels"]
+layout_mode = 2
+text = "aa"
+
+[node name="Label2" type="Label" parent="video/labels"]
+layout_mode = 2
+text = "aa"
+
+[node name="Label3" type="Label" parent="video/labels"]
+layout_mode = 2
+text = "aa"
+
+[node name="checkers" type="VBoxContainer" parent="video"]
+layout_mode = 2
+
+[node name="cb_fullscreen" type="CheckBox" parent="video/checkers"]
+layout_mode = 2
+
+[node name="cb_sem bordas" type="CheckBox" parent="video/checkers"]
+layout_mode = 2
+
+[node name="cb_vsync" type="CheckBox" parent="video/checkers"]
+layout_mode = 2
+
+[node name="resolucao" type="OptionButton" parent="video/checkers"]
+layout_mode = 2
+
+[connection signal="toggled" from="video/checkers/cb_fullscreen" to="." method="_on_cb_fullscreen_toggled"]
+[connection signal="toggled" from="video/checkers/cb_sem bordas" to="." method="_on_cb_sem_bordas_toggled"]
+[connection signal="toggled" from="video/checkers/cb_vsync" to="." method="_on_cb_vsync_toggled"]

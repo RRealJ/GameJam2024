@@ -13,7 +13,14 @@ position = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_5v1il")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_right = 40.0
 offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 color = Color(0.485703, 0.485704, 0.485703, 1)
