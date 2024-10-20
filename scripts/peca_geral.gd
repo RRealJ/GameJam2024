@@ -2,9 +2,8 @@ extends Node2D
 
 class_name Peca
 
-@onready var area2d = $sprite/area
-@onready var textura : Resource #vai pegar a textura do estagio atraves de load/preload no script do estagio.
-@onready var sprite = $sprite
+@onready var area2d = $TextureRect/area
+@onready var imagem = $sprite
 var draggable = false
 var is_inside_dropable = false
 var body_ref
@@ -16,8 +15,7 @@ var estagio
 func _on_ready() -> void:
 	if $"../".name == 'peca':
 		estagio = null
-	pass
-	#sprite.texture = textura ,atribui a textura que quiser ao carregar na cena
+	
 
 
 func _process(delta: float) -> void: 
@@ -65,3 +63,9 @@ func _on_mouse_exited() -> void:
 		draggable = false
 		self.z_index = 2 #a ultima peça sempre irá sobrepor as outras aa
 		scale = Vector2(1, 1)
+
+
+func mudar_textura(textura_nova):
+	imagem.texture = ResourceLoader.load(textura_nova)
+	
+	

@@ -10,10 +10,11 @@ size = Vector2(116.185, 115.2)
 script = ExtResource("1_bh5f1")
 
 [node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
 texture = ExtResource("1_3b64e")
-centered = false
 
 [node name="area" type="Area2D" parent="sprite"]
+position = Vector2(-64, -64)
 
 [node name="colisao" type="CollisionShape2D" parent="sprite/area"]
 position = Vector2(64, 64.4923)
