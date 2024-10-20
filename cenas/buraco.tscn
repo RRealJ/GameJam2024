@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0cx2u8u3pfbn"]
+[gd_scene load_steps=4 format=3 uid="uid://c0cx2u8u3pfbn"]
 
 [ext_resource type="Script" path="res://scripts/buraco.gd" id="1_dfs7u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5v1il"]
 size = Vector2(130, 129)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dql05"]
+size = Vector2(130, 130)
 
 [node name="buraco" type="StaticBody2D" groups=["dropable"]]
 script = ExtResource("1_dfs7u")
@@ -24,3 +27,13 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.485703, 0.485704, 0.485703, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(65, 65)
+shape = SubResource("RectangleShape2D_dql05")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

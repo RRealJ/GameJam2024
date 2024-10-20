@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var pecas_template : PackedScene
+@export var buraco_template : PackedScene
 
 
 func _ready() -> void:
@@ -28,6 +29,7 @@ func montar_pecas(path):
 				colocar_textura_peca(file_name)
 				var peca_atual = $".".get_child(-1) #vai pegar a ultima child adicionada
 				peca_atual.mudar_textura(peca_textura) #acionar função para mudar textura
+				bindar_buraco(peca_atual)
 			file_name = dir.get_next()
 			file_name = dir.get_next() #pular import
 	else:
@@ -43,3 +45,7 @@ func colocar_textura_peca(nome):
 	nova_peca.name = nome_peca
 	nova_peca.global_position = $spawn_pecas.global_position
 	$".".add_child(nova_peca)
+
+
+func bindar_buraco(peca):
+	pass

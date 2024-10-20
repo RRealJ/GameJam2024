@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxuuhsmpheis6"]
+[gd_scene load_steps=4 format=3 uid="uid://cxuuhsmpheis6"]
 
 [ext_resource type="Script" path="res://scripts/estagios.gd" id="1_44v33"]
 [ext_resource type="PackedScene" uid="uid://divceqdmw882v" path="res://cenas/peca.tscn" id="2_j2d4c"]
+[ext_resource type="PackedScene" uid="uid://c0cx2u8u3pfbn" path="res://cenas/buraco.tscn" id="3_ay3vh"]
 
 [node name="estagio1" type="Node2D"]
 script = ExtResource("1_44v33")
 pecas_template = ExtResource("2_j2d4c")
+buraco_template = ExtResource("3_ay3vh")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 offset_left = 46.0
