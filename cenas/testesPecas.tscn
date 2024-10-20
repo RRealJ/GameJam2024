@@ -10,26 +10,36 @@
 [node name="TestesPecas" type="Node2D"]
 script = ExtResource("1_i3h2h")
 
-[node name="peca2x2" parent="." instance=ExtResource("1_1sh4d")]
-position = Vector2(198, 101)
+[node name="buraco8" parent="." instance=ExtResource("5_dxoyu")]
+position = Vector2(511, 429)
 
-[node name="PecaL" parent="." instance=ExtResource("3_rdo4y")]
-position = Vector2(552, 495)
+[node name="buraco7" parent="." instance=ExtResource("5_dxoyu")]
+position = Vector2(247, 450)
 
-[node name="peca_T" parent="." instance=ExtResource("4_6exub")]
-position = Vector2(875, 458)
-
-[node name="Peca__I" parent="." instance=ExtResource("4_pjlgx")]
-position = Vector2(486, 187)
-
-[node name="buraco" parent="." instance=ExtResource("5_dxoyu")]
-position = Vector2(128, 275)
-
-[node name="buraco2" parent="." instance=ExtResource("5_dxoyu")]
-position = Vector2(325, 261)
-
-[node name="buraco3" parent="." instance=ExtResource("5_dxoyu")]
-position = Vector2(864, 146)
+[node name="buraco5" parent="." instance=ExtResource("5_dxoyu")]
+position = Vector2(116, 288)
 
 [node name="buraco4" parent="." instance=ExtResource("5_dxoyu")]
-position = Vector2(621, 272)
+position = Vector2(344, 279)
+
+[node name="buraco2" parent="." instance=ExtResource("5_dxoyu")]
+position = Vector2(438, 79)
+
+[node name="buraco" parent="." instance=ExtResource("5_dxoyu")]
+position = Vector2(177, 115)
+
+[node name="Peca__I" parent="." instance=ExtResource("4_pjlgx")]
+position = Vector2(869, 565)
+rotation = 1.5708
+
+[node name="peca2x3" parent="." instance=ExtResource("1_1sh4d")]
+position = Vector2(1030, 347)
+
+[node name="peca2x2" parent="." instance=ExtResource("1_1sh4d")]
+position = Vector2(766, 281)
+
+[node name="PecaL" parent="." instance=ExtResource("3_rdo4y")]
+position = Vector2(981, 124)
+
+[node name="pecaT" parent="." instance=ExtResource("4_6exub")]
+position = Vector2(394, 537)
