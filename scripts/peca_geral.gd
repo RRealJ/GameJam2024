@@ -48,7 +48,7 @@ func _on_area_body_entered(body: Node2D) -> void: #Está em cima do buraco
 
 
 func _on_area_body_exited(body: Node2D) -> void: #Está em cima do buraco
-	if body.is_in_group('dropable'):
+	if body.is_in_group("dropable") && body_ref == body: #NAO TIRAR
 		is_inside_dropable = false
 		body.modulate = Color(Color.LEMON_CHIFFON, 0.7)
 
