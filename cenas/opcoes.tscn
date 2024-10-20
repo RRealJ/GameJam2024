@@ -87,17 +87,21 @@ offset_bottom = -36.0
 [node name="labels" type="VBoxContainer" parent="video"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="video/labels"]
+[node name="fullscreen" type="Label" parent="video/labels"]
 layout_mode = 2
-text = "aa"
+text = "Fullscreen"
 
-[node name="Label2" type="Label" parent="video/labels"]
+[node name="sembordas" type="Label" parent="video/labels"]
 layout_mode = 2
-text = "aa"
+text = "Sem Bordas"
 
-[node name="Label3" type="Label" parent="video/labels"]
+[node name="vsync" type="Label" parent="video/labels"]
 layout_mode = 2
-text = "aa"
+text = "VSync"
+
+[node name="resolucoes" type="Label" parent="video/labels"]
+layout_mode = 2
+text = "Resoluções"
 
 [node name="checkers" type="VBoxContainer" parent="video"]
 layout_mode = 2
