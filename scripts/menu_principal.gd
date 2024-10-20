@@ -2,6 +2,7 @@ extends Control
 
 @onready var opcoes = $Opcoes
 @onready var menu = $menu
+@onready var estagios = $menuEstagios
 
 func _ready() -> void:
 	pass
@@ -38,3 +39,10 @@ func mostrar_esconder(mostrar, esconder):
 func _on_voltar_pressed() -> void:
 	$titulo.text = "Titulo Placeholder"
 	mostrar_esconder(menu, opcoes)
+	mostrar_esconder(menu, estagios)
+
+
+func _on_btn_jogar_pressed() -> void:
+	$titulo.text = "Estagios"
+	mostrar_esconder(estagios, menu)
+	

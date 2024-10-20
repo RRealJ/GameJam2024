@@ -33,15 +33,6 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="buraco" parent="." instance=ExtResource("3_ay3vh")]
-position = Vector2(534, 214)
-
-[node name="buraco2" parent="." instance=ExtResource("3_ay3vh")]
-position = Vector2(192, 352)
-
-[node name="buraco3" parent="." instance=ExtResource("3_ay3vh")]
-position = Vector2(924, 355)
-
 [node name="spawn_pecas2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 9
