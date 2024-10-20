@@ -5,6 +5,7 @@ extends Node2D
 @onready var qtd_buracos = 0 #multiplicar pelo offsset, antes de global_position
 @onready var qtd_pecas = 0 
 @onready var spawn_peca_offset = Vector2(0, 0)
+@onready var qtd_linhas = 0
 
 
 func _ready() -> void:
@@ -56,9 +57,17 @@ func colocar_textura_peca(nome):
 	
 
 func criar_bindar_buraco(peca):
-	qtd_buracos += 1
+	var offset = Vector2(0, 0)
 	var novo_buraco = buraco_template.instantiate()
 	novo_buraco.name = "b" + str(qtd_buracos)
 	novo_buraco.vinculo_correto = peca.name
+	if qtd_buracos % 10 == 0:
+		qtd_buracos = 0
+		qtd_linhas += 1
+	print(qtd_linhas)	
+	offset = Vector2(qtd_buracos * 90, qtd_linhas * 90)
+	novo_buraco.global_position = $spawn_buracos.global_position + offset
+	qtd_buracos += 1
+	$".".add_child(novo_buraco)
 
 	

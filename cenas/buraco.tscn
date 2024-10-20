@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/buraco.gd" id="1_dfs7u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5v1il"]
-size = Vector2(130, 129)
+size = Vector2(130, 130)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dql05"]
 size = Vector2(130, 130)
@@ -13,7 +13,7 @@ scale = Vector2(0.7, 0.7)
 script = ExtResource("1_dfs7u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(65, 64.5)
+position = Vector2(65, 65)
 shape = SubResource("RectangleShape2D_5v1il")
 
 [node name="ColorRect" type="ColorRect" parent="."]
