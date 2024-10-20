@@ -3,13 +3,13 @@
 [ext_resource type="Script" path="res://scripts/buraco.gd" id="1_dfs7u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5v1il"]
-size = Vector2(40, 40)
+size = Vector2(130, 129)
 
 [node name="buraco" type="StaticBody2D" groups=["dropable"]]
 script = ExtResource("1_dfs7u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(20, 20)
+position = Vector2(65, 64.5)
 shape = SubResource("RectangleShape2D_5v1il")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -18,10 +18,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 130.0
+offset_bottom = 130.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.485703, 0.485704, 0.485703, 1)
-metadata/_edit_use_anchors_ = true

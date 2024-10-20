@@ -4,20 +4,19 @@
 [ext_resource type="Script" path="res://scripts/peca_geral.gd" id="1_bh5f1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vh33k"]
-size = Vector2(116, 118)
+size = Vector2(116.185, 115.2)
 
 [node name="peca" type="Node2D"]
 script = ExtResource("1_bh5f1")
 
 [node name="sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("1_3b64e")
 centered = false
 
 [node name="area" type="Area2D" parent="sprite"]
 
 [node name="colisao" type="CollisionShape2D" parent="sprite/area"]
-position = Vector2(64, 64)
+position = Vector2(64, 64.4923)
 shape = SubResource("RectangleShape2D_vh33k")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
