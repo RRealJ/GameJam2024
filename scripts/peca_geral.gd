@@ -17,7 +17,7 @@ func _on_ready() -> void:
 	if $".".name == 'peca':
 		estagio = null
 	pass
-	#sprite.texture = textura #atribui a textura que quiser ao carregar na cena
+	sprite.texture = textura #atribui a textura que quiser ao carregar na cena
 
 
 func _process(delta: float) -> void: 
