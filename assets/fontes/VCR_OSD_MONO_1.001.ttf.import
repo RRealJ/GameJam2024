@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dt7pewa3ne3ni"
-path="res://.godot/imported/Mars_Needs_Cunnilingus.ttf-9ec62af0a1344ba330b7c1825b415e64.fontdata"
+uid="uid://cj00nb0luhd04"
+path="res://.godot/imported/VCR_OSD_MONO_1.001.ttf-b99f5e348ab1ab325916361f92a175f3.fontdata"
 
 [deps]
 
-source_file="res://assets/fontes/Mars_Needs_Cunnilingus.ttf"
-dest_files=["res://.godot/imported/Mars_Needs_Cunnilingus.ttf-9ec62af0a1344ba330b7c1825b415e64.fontdata"]
+source_file="res://assets/fontes/VCR_OSD_MONO_1.001.ttf"
+dest_files=["res://.godot/imported/VCR_OSD_MONO_1.001.ttf-b99f5e348ab1ab325916361f92a175f3.fontdata"]
 
 [params]
 
