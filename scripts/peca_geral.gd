@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 				tween.tween_property(self, "position", body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
 				if body_ref.vinculo_atual != $".":
 					if body_ref.vinculo_atual != null:
-						body_ref.vinculo_atual.global_position = initialPos
+						tween.tween_property(body_ref.vinculo_atual, "global_position", initialPos, 0.2).set_ease(Tween.EASE_OUT)
 				body_ref.vinculo_atual = $"."
 			else:
 				tween.tween_property(self, "global_position", initialPos, 0.2).set_ease(Tween.EASE_OUT)
