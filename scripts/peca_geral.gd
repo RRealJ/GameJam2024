@@ -32,6 +32,10 @@ func _process(delta: float) -> void:
 			var tween = get_tree().create_tween()
 			if is_inside_dropable:
 				tween.tween_property(self, "position", body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
+				if body_ref.vinculo_atual != $".":
+					if body_ref.vinculo_atual != null:
+						body_ref.vinculo_atual.global_position = initialPos
+				body_ref.vinculo_atual = $"."
 			else:
 				tween.tween_property(self, "global_position", initialPos, 0.2).set_ease(Tween.EASE_OUT)
 

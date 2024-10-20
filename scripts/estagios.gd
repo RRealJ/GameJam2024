@@ -59,6 +59,6 @@ func criar_bindar_buraco(peca):
 	qtd_buracos += 1
 	var novo_buraco = buraco_template.instantiate()
 	novo_buraco.name = "b" + str(qtd_buracos)
-	novo_buraco.vinculo = peca.name
+	novo_buraco.vinculo_correto = peca.name
 
 	
