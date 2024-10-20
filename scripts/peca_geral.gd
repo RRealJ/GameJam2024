@@ -55,14 +55,14 @@ func _on_mouse_entered() -> void:
 			estagio.set_pecas_index_to_1()
 		draggable = true
 		self.z_index = 3 
-		scale = Vector2(1.02, 1.02)
+		scale = Vector2(0.72, 0.72)
 
 
 func _on_mouse_exited() -> void:
 	if not Global.is_dragging: 
 		draggable = false
 		self.z_index = 2 #a ultima peça sempre irá sobrepor as outras aa
-		scale = Vector2(1, 1)
+		scale = Vector2(0.7, 0.7)
 
 
 func mudar_textura(textura_nova):

@@ -9,18 +9,47 @@ script = ExtResource("1_44v33")
 pecas_template = ExtResource("2_j2d4c")
 buraco_template = ExtResource("3_ay3vh")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_left = 46.0
-offset_top = 41.0
-offset_right = 1109.0
-offset_bottom = 517.0
-
 [node name="spawn_pecas" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 538.0
-offset_top = 553.0
-offset_right = 578.0
-offset_bottom = 593.0
+offset_left = 1137.0
+offset_top = 849.0
+offset_right = 1267.0
+offset_bottom = 938.0
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="spawn_buracos" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 384.0
+offset_top = 197.0
+offset_right = 775.0
+offset_bottom = 349.0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="buraco" parent="." instance=ExtResource("3_ay3vh")]
+position = Vector2(534, 214)
+
+[node name="buraco2" parent="." instance=ExtResource("3_ay3vh")]
+position = Vector2(192, 352)
+
+[node name="buraco3" parent="." instance=ExtResource("3_ay3vh")]
+position = Vector2(924, 355)
+
+[node name="spawn_pecas2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 708.0
+offset_right = 170.0
+offset_bottom = 797.0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

@@ -9,6 +9,7 @@ size = Vector2(130, 129)
 size = Vector2(130, 130)
 
 [node name="buraco" type="StaticBody2D" groups=["dropable"]]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_dfs7u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

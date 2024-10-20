@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 
 Global="*res://scripts/global.gd"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=960
+
 [global_group]
 
 dropable="é dropavel"

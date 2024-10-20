@@ -2,6 +2,9 @@ extends Node2D
 
 @export var pecas_template : PackedScene
 @export var buraco_template : PackedScene
+@onready var qtd_buracos = 0 #multiplicar pelo offsset, antes de global_position
+@onready var qtd_pecas = 0 
+@onready var spawn_peca_offset = Vector2(0, 0)
 
 
 func _ready() -> void:
@@ -29,7 +32,7 @@ func montar_pecas(path):
 				colocar_textura_peca(file_name)
 				var peca_atual = $".".get_child(-1) #vai pegar a ultima child adicionada
 				peca_atual.mudar_textura(peca_textura) #acionar função para mudar textura
-				bindar_buraco(peca_atual)
+				criar_bindar_buraco(peca_atual)
 			file_name = dir.get_next()
 			file_name = dir.get_next() #pular import
 	else:
@@ -43,9 +46,19 @@ func colocar_textura_peca(nome):
 	for i in range(3):
 		nome_peca += nome_split[i]
 	nova_peca.name = nome_peca
-	nova_peca.global_position = $spawn_pecas.global_position
+	nova_peca.global_position = $spawn_pecas.global_position - spawn_peca_offset
+	spawn_peca_offset = Vector2(spawn_peca_offset[0], spawn_peca_offset[1] + 15)
+	if qtd_pecas >= 45:
+		spawn_peca_offset = Vector2(spawn_peca_offset[0], spawn_peca_offset[1] - 35)
+		nova_peca.global_position = $spawn_pecas2.global_position - spawn_peca_offset
+	qtd_pecas += 1
 	$".".add_child(nova_peca)
+	
 
+func criar_bindar_buraco(peca):
+	qtd_buracos += 1
+	var novo_buraco = buraco_template.instantiate()
+	novo_buraco.name = "b" + str(qtd_buracos)
+	novo_buraco.vinculo = peca.name
 
-func bindar_buraco(peca):
-	pass
+	
