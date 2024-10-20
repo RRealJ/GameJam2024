@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6jewbxb35735"]
+[gd_scene load_steps=4 format=3 uid="uid://b6jewbxb35735"]
 
 [ext_resource type="FontFile" uid="uid://cj00nb0luhd04" path="res://assets/fontes/VCR_OSD_MONO_1.001.ttf" id="1_3kh80"]
 [ext_resource type="Script" path="res://scripts/menu_principal.gd" id="1_irdta"]
+[ext_resource type="PackedScene" uid="uid://b4ug05ucjvs5g" path="res://cenas/opcoes.tscn" id="3_if846"]
 
 [node name="MenuPrincipal" type="Control"]
 layout_mode = 3
@@ -30,7 +31,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_3kh80")
 theme_override_font_sizes/font_size = 48
-text = "Titulo Place Holder"
+text = "Titulo Placeholder"
 horizontal_alignment = 1
 
 [node name="menu" type="VBoxContainer" parent="."]
@@ -60,4 +61,12 @@ text = "Opções"
 layout_mode = 2
 text = "Sair"
 
+[node name="Opcoes" parent="." instance=ExtResource("3_if846")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="menu/btn_opcoes" to="." method="_on_btn_opcoes_pressed"]
 [connection signal="pressed" from="menu/btn_sair" to="." method="_on_btn_sair_pressed"]
+[connection signal="pressed" from="Opcoes/voltar" to="." method="_on_voltar_pressed"]
+
+[editable path="Opcoes"]
