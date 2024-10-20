@@ -24,3 +24,4 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.485703, 0.485704, 0.485703, 1)
+metadata/_edit_use_anchors_ = true

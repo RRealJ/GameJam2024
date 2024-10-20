@@ -2,7 +2,6 @@ extends Node2D
 
 class_name Peca
 
-@onready var estagio = $".."
 @onready var area2d = $sprite/area
 @onready var textura : Resource #vai pegar a textura do estagio atraves de load/preload no script do estagio.
 @onready var sprite = $sprite
@@ -11,10 +10,12 @@ var is_inside_dropable = false
 var body_ref
 var initialPos : Vector2
 var offset : Vector2
-var encaixe
+var estagio
 
 
 func _on_ready() -> void:
+	if $".".name == 'peca':
+		estagio = null
 	pass
 	#sprite.texture = textura #atribui a textura que quiser ao carregar na cena
 
@@ -22,7 +23,6 @@ func _on_ready() -> void:
 func _process(delta: float) -> void: 
 	if draggable:	#codigo para arrastar com mouse e animação com tween
 		if Input.is_action_just_pressed("click"):
-			print(encaixe.name)
 			initialPos = global_position
 			offset = get_global_mouse_position() - global_position
 			Global.is_dragging = true
@@ -53,7 +53,8 @@ func _on_area_body_exited(body: Node2D) -> void: #Está em cima do buraco
 
 func _on_mouse_entered() -> void:
 	if not Global.is_dragging:
-		estagio.set_pecas_index_to_1()
+		if estagio != null:
+			estagio.set_pecas_index_to_1()
 		draggable = true
 		self.z_index = 3 
 		scale = Vector2(1.02, 1.02)
